@@ -1,0 +1,60 @@
+
+****************
+Lloris 6 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 1 [can_sub] => 1 [ep_this] => 6 [event_points] => 6 [id] => 364 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 15 [is_vice_captain] => [type] => 1 [ep_next] => 3.3 ) ****************
+
+****************
+Vertonghen 8 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 2 [can_sub] => 1 [ep_this] => 8 [event_points] => 8 [id] => 371 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 15 [is_vice_captain] => [type] => 2 [ep_next] => 3 ) ****************
+
+****************
+Fonte 1 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 3 [can_sub] => 1 [ep_this] => 1 [event_points] => 1 [id] => 341 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 14 [is_vice_captain] => [type] => 2 [ep_next] => 1.3 ) ****************
+
+****************
+Kolarov 6 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 4 [can_sub] => 1 [ep_this] => 3.5 [event_points] => 6 [id] => 233 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 10 [is_vice_captain] => [type] => 2 [ep_next] => 8.3 ) ****************
+
+****************
+Eriksen 3 -------------
+stdClass Object ( [coptr] => [played] => 0 [pos] => 5 [can_sub] => 1 [ep_this] => 3 [event_points] => 3 [id] => 387 [sub] => 0 [m] => 1 [copnr] => [is_captain] => [team] => 15 [is_vice_captain] => [type] => 3 [ep_next] => 1.5 ) ****************
+
+****************
+Herrera 3 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 6 [can_sub] => 1 [ep_this] => 6 [event_points] => 3 [id] => 281 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 11 [is_vice_captain] => [type] => 3 [ep_next] => 3.5 ) ****************
+
+****************
+Larsson 2 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 7 [can_sub] => 1 [ep_this] => 2.5 [event_points] => 2 [id] => 431 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 17 [is_vice_captain] => [type] => 3 [ep_next] => 2 ) ****************
+
+****************
+Mirallas 2 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 8 [can_sub] => 1 [ep_this] => 2 [event_points] => 2 [id] => 147 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 6 [is_vice_captain] => [type] => 3 [ep_next] => 2.5 ) ****************
+
+****************
+Remy 12 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 9 [can_sub] => 1 [ep_this] => 7 [event_points] => 12 [id] => 335 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 4 [is_vice_captain] => [type] => 4 [ep_next] => 0.8 ) ****************
+
+****************
+Lukaku 4 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 10 [can_sub] => 1 [ep_this] => 2 [event_points] => 2 [id] => 103 [sub] => 0 [m] => 2 [copnr] => 100 [is_captain] => 1 [team] => 6 [is_vice_captain] => [type] => 4 [ep_next] => 5.5 ) ****************
+
+****************
+CissÃ© 2 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 11 [can_sub] => 1 [ep_this] => 2 [event_points] => 2 [id] => 314 [sub] => 0 [m] => 1 [copnr] => 100 [is_captain] => [team] => 12 [is_vice_captain] => 1 [type] => 4 [ep_next] => 0.5 ) ****************
+
+****************
+Green 0 -------------
+stdClass Object ( [coptr] => 0 [played] => 0 [pos] => 12 [can_sub] => 1 [ep_this] => 0 [event_points] => 0 [id] => 318 [sub] => 1 [m] => 1 [copnr] => 100 [is_captain] => [team] => 13 [is_vice_captain] => [type] => 1 [ep_next] => 0 ) ****************
+
+****************
+Sterling 0 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 13 [can_sub] => 1 [ep_this] => 0 [event_points] => 0 [id] => 217 [sub] => 2 [m] => 1 [copnr] => 100 [is_captain] => [team] => 9 [is_vice_captain] => [type] => 3 [ep_next] => 2.2 ) ****************
+
+****************
+Koscielny 0 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 14 [can_sub] => 1 [ep_this] => 3.7 [event_points] => 0 [id] => 2 [sub] => 3 [m] => 1 [copnr] => 100 [is_captain] => [team] => 1 [is_vice_captain] => [type] => 2 [ep_next] => 4.8 ) ****************
+
+****************
+van Aanholt 0 -------------
+stdClass Object ( [coptr] => 100 [played] => 0 [pos] => 15 [can_sub] => 1 [ep_this] => 3.5 [event_points] => 1 [id] => 541 [sub] => 4 [m] => 1 [copnr] => 100 [is_captain] => [team] => 17 [is_vice_captain] => [type] => 2 [ep_next] => 5.2 ) ****************
