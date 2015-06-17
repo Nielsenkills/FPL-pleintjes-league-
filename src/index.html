@@ -8,7 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <link rel="stylesheet" href="..\.tmp\serve\app/vendor.css">
+    <link rel="stylesheet" href="app/vendor.css">
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
     <!-- endbower -->
@@ -25,6 +25,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div ng-include="'app/components/navbar/navbar.html'"></div>
     <div ui-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
