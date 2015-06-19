@@ -9,13 +9,38 @@ global $currentGameWeek;
 $currentGameWeek = 38;
 */
 $teams = [
-"Robin V."=>797907,
-"Sven S."=>798119,
-"Yinan M."=>798024,
-"Jeff M."=>798421,
-"Philip H."=>798140,
-"Nielsen S."=>798595
+{
+	"firstName"=>"Robin",
+	"lastName"=>"Verhulst",
+	"teamId"=>797907
+},
+{
+	"firstName"=>"Sven",
+	"lastName"=>"Stassyns",
+	"teamId"=>798119
+},
+{
+	"firstName"=>"Yinan",
+	"lastName"=>"Ma",
+	"teamId"=>798024
+},
+{
+	"firstName"=>"Jeff",
+	"lastName"=>"Maeninckx",
+	"teamId"=>798421
+},
+{
+	"firstName"=>"Philip",
+	"lastName"=>"Hermans",
+	"teamId"=>798140
+},
+{
+	"firstName"=>"Nielsen",
+	"lastName"=>"Stassyns",
+	"teamId"=>798595
+}
 ];
+
 
 session_start();
 
@@ -82,12 +107,15 @@ function getLeagueStandings($leagueId){
 
 	return getPlayerTableInfo($doc);
 }
+function getAllTeams(){
+	foreach ($teams as $team) {
+		# code...
+	}
+}
 
 
 function getPlayerListForTeam($teamId){
 	$returnArray = [];
-
-	getCurrentGameWeek(194302);
 
 	$url = 'http://fantasy.premierleague.com/entry/' . $teamId . '/event-history/'. $_SESSION["GW"] . '/';
 	$htm = file_get_contents($url);
@@ -122,6 +150,7 @@ function getPlayerListForTeam($teamId){
 		//create a player object
 		$player = new Player($jsonData->id,
 			$stringname,
+			$jsonData->team,
 			$jsonData->event_points,
 			$jsonData->type,
 			$isSub,
@@ -147,10 +176,14 @@ function getPlayerListForTeam($teamId){
 if(isset($_GET["q"])){
 	switch ($_GET["q"]) {
 	case 'getPlayerList':
+		getCurrentGameWeek(194302);
 		echo json_encode(getPlayerListForTeam($_GET["tid"]));
 		break;
 	case 'getTournamentTable':
 		echo json_encode(getLeagueStandings($_GET["lid"]));
+		break;
+	case 'getSessionId':
+		echo session_id();
 		break;
 	default:
 		break;

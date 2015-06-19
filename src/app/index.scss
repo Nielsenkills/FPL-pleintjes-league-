@@ -6,31 +6,112 @@ body {
     height: 100%;
 }
 
+$pastel-red:#FF9999;
+$green:green;
+$red:red;
+$blue:blue;
+$yellow:yellow;
+.player-overview{
+    display: inline-block;  
+    margin-top: -10px;
+    padding-left:0px;
+    padding-right:0px;
+}
+.sidepanel{
+    display: inline-block;
+    background-color:blue;
+    height:50vh; 
+    margin-top: -10px;
+    padding-left:0px;
+    padding-right:0px;
+}
 .team {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     .header {
-        //height: 10vh;
         border-bottom: 1px solid black;
+        .name {
+            font-weight: bold;
+        }
+        .transfers {
+            text-align: left;
+            width: 25%;
+            display: inline-block;
+        }
+        .gw-points {
+            text-align: center;
+            width: 45%;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 2rem;
+            span {
+                font-size: 1rem;
+            }
+        }
+        .played-players {
+            text-align: right;
+            width: 25%;
+            display: inline-block;
+        }
     }
     .playerList {
-        span.type {
-            width: 5px;
+        .player {
+            &.played {
+                font-weight: bold;
+            }
+            &.sub {
+                background-color: lighten($pastel-red,30%);
+            }
             &.GK {
-                background-color: green;
+                .name div {
+                    border-left: 5px solid $green;
+                }
             }
             &.DEF {
-                background-color: blue;
+                .name div {
+                    border-left: 5px solid $blue;
+                }
             }
             &.MID {
-                background-color: yellow;
+                .name div {
+                    border-left: 5px solid $yellow;
+                }
             }
             &.ATT {
-                background-color: red;
+                .name div {
+                    border-left: 5px solid $red;
+                }
+            }
+            .name {
+                padding-left: 0px;
+                div {
+                    padding-left: 4px;
+                    height: 100%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .captaincy {
+                padding-left: 5px;
+                padding-right: 0px;
             }
         }
     }
 }
 
-.thumbnail {}
+.no-gutter > div {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.row.no-gutter {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.thumbnail {
+    font-family: Helvetica;
+}
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 

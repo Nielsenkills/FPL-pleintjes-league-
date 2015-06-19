@@ -11,8 +11,9 @@ angular.module('gretel', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui
             })
             .state('league', {
                 url: '/league',
-                templateUrl: 'app/main/main.html',
-                controller: 'MainCtrl'
+                templateUrl: 'app/league/league.html',
+                controller: 'LeagueCtrl',
+                controllerAs:'vm'
             })
             .state('GWTeam', {
                 url: '/team',

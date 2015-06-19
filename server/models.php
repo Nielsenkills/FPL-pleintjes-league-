@@ -6,35 +6,25 @@ class GWTeam
     public $id;
     public $firstName;
     public $lastName;
+    public $teamName;
     
     
     public $points;
     public $transfers;
     public $players;
 
-    public $wins;
-    public $draws;
-    public $losses;
-    
-    public $totalPoints;
-    public $matchPoints;
-
     // Assigning the values
-    public function __construct($id,$firstName,$lastName,$rank,$teamName,$wins,$draws,$losses,$totalPoints,$matchPoints)
+    public function __construct($id,$firstName,$lastName,$teamName,$points,$transfers,$players)
     {
         $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        
-        $this->rank = $rank;
+
         $this->teamName = $teamName;
         
-        $this->wins = $wins;
-        $this->draws = $draws;
-        $this->losses = $losses;
-        
-        $this->totalPoints = $totalPoints;
-        $this->matchPoints = $matchPoints;
+        $this->points = $points;
+        $this->transfers = $transfers;
+        $this->players = $players;
     }
 }
 
@@ -76,6 +66,7 @@ class Team
 class Player{
     public $id;
     public $name;
+    public $club;
     public $gamePoints;
     public $playerType;
     public $isSub;
@@ -84,10 +75,11 @@ class Player{
     public $details;
 
     // Assigning the values
-    public function __construct($id,$name,$gamePoints,$playerType,$isSub,$isCaptain,$isViceCaptain,$details)
+    public function __construct($id,$name,$club,$gamePoints,$playerType,$isSub,$isCaptain,$isViceCaptain,$details)
     {
         $this->id = $id;
         $this->name = $name;
+        $this->club = $club;
         $this->gamePoints = $gamePoints;
         $this->playerType = $playerType;
         $this->isSub = $isSub;

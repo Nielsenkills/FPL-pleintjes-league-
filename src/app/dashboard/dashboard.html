@@ -1,66 +1,30 @@
-<div class="">
-    <div class="team col-md-4">
+<div class="player-overview col-sm-12 col-md-10">
+    <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
             <div class="header">
-                <div class="name text-center">Robin</div>
+                <div class="name text-center">{{team.teamName}}</div>
                 <div class="info text-center">
-                    <span class="transfers">2</span>
-                    <span class="gwPoints"></span>
-                    <span class="playedPlayers">8</span>
+                    <div class="transfers"><span class="hidden-xs">Transfers:2</span><span class="visible-xs">T:2</span></div>
+                    <div class="gw-points">10<span>pts</span></div>
+                    <div class="played-players">{{team.playedPlayers}}/15</div>
                 </div>
             </div>
             <div class="playerList">
-                <div class="player" ng-repeat="player in vm.teams">
-                    <span class="type" ng-class="{'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4}">&nbsp;</span>
-                    <span class="name">{{player.name}}</span>
-                    <span class="gwPoints">{{player.details.gamePoints}}</span>
-                    <span class="captaincy">
-	                <span ng-show="player.isCaptain">C</span>
-                    <span ng-show="player.isViceCaptain">V</span>
-                    </span>
+                <div class="player row no-gutter" ng-class="{'sub':player.isSub,'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4,'played':player.details.minutesPlayed > 0}" ng-repeat="player in team.players">
+                    <div>
+                        <div class="name col-xs-6 col-md-4">
+                            <div>{{player.name}}</div>
+                        </div>
+                        <div class="team col-xs-2 col-md-4"><span class="hidden-xs">{{player.details.team.name}}</span><span class="visible-xs">{{player.details.team.short}}</span></div>
+                        <div class="gwPoints col-xs-1 col-md-2" tooltip="Goals: {{player.details.goalsScored}} Assists: {{player.details.assists}}" tooltip-placement="left">{{player.details.gamePoints}}</div>
+                        <div class="captaincy col-xs-1 col-md-1">
+                            <span ng-show="player.isCaptain">C</span>
+                            <span ng-show="player.isViceCaptain">V</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="team col-md-4">
-        <div class="thumbnail">
-            <div class="playerList">
-                <div class="player" ng-repeat="player in vm.teams">
-                    <span class="type">{{player.playerType}}</span>
-                    <span class="name">{{player.name}}</span>
-                    <span class="gwPoints">{{player.details.gamePoints}}</span>
-                    <span class="captaincy">
-	                <span ng-show="player.isCaptain">C</span>
-                    <span ng-show="player.isViceCaptain">V</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="team col-md-4">
-        <div class="thumbnail">
-            <div class="player" ng-repeat="player in vm.teams">
-                <span class="type">{{player.playerType}}</span>
-                <span class="name">{{player.name}}</span>
-                <span class="gwPoints">{{player.details.gamePoints}}</span>
-                <span class="captaincy">
-	                <span ng-show="player.isCaptain">C</span>
-                <span ng-show="player.isViceCaptain">V</span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="team col-md-4">
-        <div class="thumbnail">
-            <div class="player" ng-repeat="player in vm.teams">
-                <span class="type">{{player.playerType}}</span>
-                <span class="name">{{player.name}}</span>
-                <span class="gwPoints">{{player.details.gamePoints}}</span>
-                <span class="captaincy">
-	                <span ng-show="player.isCaptain">C</span>
-                <span ng-show="player.isViceCaptain">V</span>
-                </span>
             </div>
         </div>
     </div>
 </div>
+<div class="sidepanel col-md-2 hidden-xs hidden-sm">SidePanel</div>
