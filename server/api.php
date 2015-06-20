@@ -1,6 +1,8 @@
 <?php 
 include 'models.php';
+include 'currentusers.php';
 include 'functions.php';
+
 
 
 /*
@@ -8,38 +10,7 @@ global $currentGameWeek;
 
 $currentGameWeek = 38;
 */
-$teams = [
-{
-	"firstName"=>"Robin",
-	"lastName"=>"Verhulst",
-	"teamId"=>797907
-},
-{
-	"firstName"=>"Sven",
-	"lastName"=>"Stassyns",
-	"teamId"=>798119
-},
-{
-	"firstName"=>"Yinan",
-	"lastName"=>"Ma",
-	"teamId"=>798024
-},
-{
-	"firstName"=>"Jeff",
-	"lastName"=>"Maeninckx",
-	"teamId"=>798421
-},
-{
-	"firstName"=>"Philip",
-	"lastName"=>"Hermans",
-	"teamId"=>798140
-},
-{
-	"firstName"=>"Nielsen",
-	"lastName"=>"Stassyns",
-	"teamId"=>798595
-}
-];
+
 
 
 session_start();
@@ -120,10 +91,21 @@ function getPlayerListForTeam($teamId){
 	$url = 'http://fantasy.premierleague.com/entry/' . $teamId . '/event-history/'. $_SESSION["GW"] . '/';
 	$htm = file_get_contents($url);
 
+	//get the GWTeam object from the predefined array in currentusers.php
+	$GWTeam = getGWTeamFromArray($teamId);
+
+	print_r($GWTeam);
+	echo '<br/>************************************<br/>';
+
 	//get the pitch info for the players
 	$DOMdoc = new DOMDocument();
 	libxml_use_internal_errors(true);
 	$DOMdoc->loadHTML($htm);
+
+
+	
+
+
 
 
 	$playerFinder = new DomXPath($DOMdoc);
@@ -131,6 +113,19 @@ function getPlayerListForTeam($teamId){
 	$playerRows = $playerFinder->query("//div[contains(@class, '$classname')]");
 
 	
+	//Get the total points for this gw team
+	$totalPointsNode = $playerFinder->query("//div[contains(@class, 'ismSBPrimary')]/div");
+	$GWTeam->points = preg_replace("/[^0-9]/","",$totalPointsNode->item(0)->nodeValue);
+
+	//Get the amount of transfers for this gw team
+	$transfersNode = $playerFinder->query("//dl[contains(@class, 'ismSBDefList')]/dd");
+	$GWTeam->transfers = preg_replace("/[^0-9]/","",$transfersNode->item(1)->nodeValue);
+
+	//Get the the teamname  for this gw team
+	$teamNameNode = $playerFinder->query("//h2[contains(@class, 'ismSection3')]");
+	$GWTeam->teamName = $teamNameNode->item(0)->nodeValue;
+
+
 	// create an array using 'id' as the index
 	$playerStats = array();
 
@@ -164,7 +159,8 @@ function getPlayerListForTeam($teamId){
 		
 	}
 
-	return $returnArray;
+	$GWTeam->players = $returnArray;
+	return $GWTeam;
 }
 
 
@@ -190,7 +186,8 @@ if(isset($_GET["q"])){
 	}
 }
 else{
-	echo json_encode(getLeagueStandings(194302));
+	//echo json_encode(getLeagueStandings(194302));
+	echo json_encode(getPlayerListForTeam(798421));
 }
 
 
