@@ -78,14 +78,17 @@ function getLeagueStandings($leagueId){
 
 	return getPlayerTableInfo($doc);
 }
-function getAllTeams(){
-	foreach ($teams as $team) {
-		# code...
+function getAllGWTeams(){
+$returnArray = array();
+
+	foreach (getAllTeams() as $team) {
+			$returnArray[] = getGWTeam($team->id);
 	}
+	return $returnArray;
 }
 
 
-function getPlayerListForTeam($teamId){
+function getGWTeam($teamId){
 	$returnArray = [];
 
 	$url = 'http://fantasy.premierleague.com/entry/' . $teamId . '/event-history/'. $_SESSION["GW"] . '/';
@@ -93,20 +96,10 @@ function getPlayerListForTeam($teamId){
 
 	//get the GWTeam object from the predefined array in currentusers.php
 	$GWTeam = getGWTeamFromArray($teamId);
-
-	print_r($GWTeam);
-	echo '<br/>************************************<br/>';
-
 	//get the pitch info for the players
 	$DOMdoc = new DOMDocument();
 	libxml_use_internal_errors(true);
 	$DOMdoc->loadHTML($htm);
-
-
-	
-
-
-
 
 	$playerFinder = new DomXPath($DOMdoc);
 	$classname="ismPitchElement";
@@ -171,9 +164,13 @@ function getPlayerListForTeam($teamId){
 //routing
 if(isset($_GET["q"])){
 	switch ($_GET["q"]) {
-	case 'getPlayerList':
+	case 'getGWTeam':
 		getCurrentGameWeek(194302);
-		echo json_encode(getPlayerListForTeam($_GET["tid"]));
+		echo json_encode(getGWTeam($_GET["tid"]));
+		break;
+	case 'getAllGWTeams':
+		getCurrentGameWeek(194302);
+		echo json_encode(getAllGWTeams());
 		break;
 	case 'getTournamentTable':
 		echo json_encode(getLeagueStandings($_GET["lid"]));
@@ -187,7 +184,7 @@ if(isset($_GET["q"])){
 }
 else{
 	//echo json_encode(getLeagueStandings(194302));
-	echo json_encode(getPlayerListForTeam(798421));
+	echo json_encode(getGWTeam(798421));
 }
 
 

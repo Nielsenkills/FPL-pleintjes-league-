@@ -2,10 +2,10 @@
     <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
             <div class="header">
-                <div class="name text-center">{{team.teamName}}</div>
+                <div class="name text-center">{{team.firstName}}</div>
                 <div class="info text-center">
-                    <div class="transfers"><span class="hidden-xs">Transfers:2</span><span class="visible-xs">T:2</span></div>
-                    <div class="gw-points">10<span>pts</span></div>
+                    <div class="transfers"><span class="hidden-xs">Transfers:{{team.transfers}}</span><span class="visible-xs">T:{{team.transfers}}</span></div>
+                    <div class="gw-points">{{team.points}}<span>pts</span></div>
                     <div class="played-players">{{team.playedPlayers}}/15</div>
                 </div>
             </div>

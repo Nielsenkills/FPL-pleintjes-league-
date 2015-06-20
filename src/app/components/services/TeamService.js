@@ -13,7 +13,9 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                $http.get('./data/getGWTeams.json').success(function(data) {
+                //$http.get('./data/getGWTeams.json').success(function(data) {
+                $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                
                     data.forEach(function(team) {
 
                         //set the total played players for each team
@@ -22,7 +24,7 @@ angular.module('gretel')
 
                         team.players.forEach(function(player) {
                             //set the club objects of each player
-                            player.details.team = svc.getClubForTeamId(Math.floor(Math.random() * 19 + 1));
+                            player.details.team = svc.getClubForTeamId(player.details.club);
 
                             if (player.details.minutesPlayed > 0){
                                 played++;
