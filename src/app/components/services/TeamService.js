@@ -13,8 +13,8 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                $http.get('./data/getGWTeams.json').success(function(data) {
-                //$http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                //$http.get('./data/getGWTeams.json').success(function(data) {
+                $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
 
                     data.forEach(function(team) {
 
@@ -51,18 +51,25 @@ angular.module('gretel')
         };
 
         svc.getTooltipInfo = function(player) {
+            var _CLEAN_SHEETS = ' CS: ',
+                _SAVES = ' S: ',
+                _GOALS = ' G: ',
+                _ASSISTS = ' A: ',
+                _YELLOW_CARDS = ' YC: ',
+                _RED_CARDS = ' RC: ';
+
             switch (player.playerType) {
                 case 1:
-                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Saves: ' + player.details.saves;
+                    return _CLEAN_SHEETS + player.details.cleanSheets + _SAVES + player.details.saves;
                     break;
                 case 2:
-                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    return _CLEAN_SHEETS + player.details.cleanSheets + _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
                     break;
                 case 3:
-                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    return _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
                     break;
                 case 4:
-                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    return _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
                     break;
             }
         };

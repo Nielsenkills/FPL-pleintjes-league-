@@ -15,6 +15,7 @@ function getGWTeamFromArray($teamID){
 }
 
 
+function getAllTeams(){
 	$teams = [
 		new GWTeam(797907,"Robin","Verhulst",null,0,0,null),
 		new GWTeam(798119,"Sven","Stassyns",null,0,0,null),
