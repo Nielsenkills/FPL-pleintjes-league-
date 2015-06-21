@@ -1,4 +1,4 @@
-<div class="player-overview col-sm-12 col-md-10">
+<div class="player-overview col-sm-12 col-md-10" ng-show="vm.teams">
     <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
             <div class="header">
@@ -10,13 +10,13 @@
                 </div>
             </div>
             <div class="playerList">
-                <div class="player row no-gutter" ng-class="{'sub':player.isSub,'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4,'played':player.details.minutesPlayed > 0}" ng-repeat="player in team.players">
+                <div class="player row no-gutter" ng-class="{'sub':player.isSub,'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4,'played':player.details.minutesPlayed > 0}" ng-repeat="player in team.players" >
                     <div>
-                        <div class="name col-xs-6 col-md-4">
+                        <div class="name col-xs-6 col-md-4" tooltip="{{player.tooltip}}" tooltip-placement="bottom">
                             <div>{{player.name}}</div>
                         </div>
                         <div class="team col-xs-2 col-md-4"><span class="hidden-xs">{{player.details.team.name}}</span><span class="visible-xs">{{player.details.team.short}}</span></div>
-                        <div class="gwPoints col-xs-1 col-md-2" tooltip="Goals: {{player.details.goalsScored}} Assists: {{player.details.assists}}" tooltip-placement="left">{{player.details.gamePoints}}</div>
+                        <div class="gwPoints col-xs-1 col-md-2" tooltip="{{player.tooltip}}" tooltip-placement="bottom">{{player.details.gamePoints}}</div>
                         <div class="captaincy col-xs-1 col-md-1">
                             <span ng-show="player.isCaptain">C</span>
                             <span ng-show="player.isViceCaptain">V</span>
@@ -27,4 +27,10 @@
         </div>
     </div>
 </div>
-<div class="sidepanel col-md-2 hidden-xs hidden-sm">SidePanel</div>
+<div class="col-sm-12 col-md-10" id="loader" ng-hide="vm.teams">
+    
+<svg class="svg" width="200" height="200">
+  <circle cx="100" cy="100" r="50" />
+</svg>
+</div>
+<div class="sidepanel col-md-2 hidden-xs hidden-sm" ng-show="vm.teams">SidePanel</div>

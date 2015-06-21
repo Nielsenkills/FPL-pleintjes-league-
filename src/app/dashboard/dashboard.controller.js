@@ -20,21 +20,4 @@ angular.module('gretel')
 
         };
 
-        vm.getTooltipInfo = function(player) {
-        	console.log('test');
-            switch (player.type) {
-                case 1:
-                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Saves: ' + player.details.saves;
-                    break;
-                case 2:
-                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
-                    break;
-                case 3:
-                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
-                    break;
-                case 4:
-                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
-                    break;
-            }
-        };
     }]);

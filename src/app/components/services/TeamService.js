@@ -13,9 +13,9 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                //$http.get('./data/getGWTeams.json').success(function(data) {
-                $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
-                
+                $http.get('./data/getGWTeams.json').success(function(data) {
+                //$http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+
                     data.forEach(function(team) {
 
                         //set the total played players for each team
@@ -24,9 +24,9 @@ angular.module('gretel')
 
                         team.players.forEach(function(player) {
                             //set the club objects of each player
-                            player.details.team = svc.getClubForTeamId(player.details.club);
-
-                            if (player.details.minutesPlayed > 0){
+                            player.details.team = svc.getClubForTeamId(player.club);
+                            player.tooltip = svc.getTooltipInfo(player);
+                            if (player.details.minutesPlayed > 0) {
                                 played++;
                             }
 
@@ -44,12 +44,28 @@ angular.module('gretel')
         };
 
         svc.getClubForTeamId = function(id) {
-            if (id === null){
+            if (id === null) {
                 id = 1;
             }
             return svc.clubs[id];
         };
 
+        svc.getTooltipInfo = function(player) {
+            switch (player.playerType) {
+                case 1:
+                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Saves: ' + player.details.saves;
+                    break;
+                case 2:
+                    return 'Clean Sheets: ' + player.details.cleanSheets + ' Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    break;
+                case 3:
+                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    break;
+                case 4:
+                    return 'Goals: ' + player.details.goalsScored + ' Assists: ' + player.details.assists;
+                    break;
+            }
+        };
 
         svc.clubs = {
             1: {

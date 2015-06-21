@@ -4,7 +4,7 @@ html {
 
 body {
     height: 100%;
-    font-size:  1.7rem;
+    font-size: 1.7rem;
 }
 
 $pastel-red:#FF9999;
@@ -12,20 +12,22 @@ $green:green;
 $red:red;
 $blue:blue;
 $yellow:yellow;
-.player-overview{
-    display: inline-block;  
-    margin-top: -10px;
-    padding-left:0px;
-    padding-right:0px;
-}
-.sidepanel{
+.player-overview {
     display: inline-block;
-    background-color:blue;
-    height:50vh; 
     margin-top: -10px;
-    padding-left:0px;
-    padding-right:0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
+.sidepanel {
+    display: inline-block;
+    background-color: blue;
+    height: 50vh;
+    margin-top: -10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .team {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
@@ -61,7 +63,7 @@ $yellow:yellow;
                 font-weight: bold;
             }
             &.sub {
-                background-color: lighten($pastel-red,30%);
+                background-color: lighten($pastel-red, 30%);
             }
             &.GK {
                 .name div {
@@ -112,6 +114,82 @@ $yellow:yellow;
 
 .thumbnail {
     font-family: Helvetica;
+}
+
+$svg-radius: 50;
+$stroke-width: 4;
+$radius: $svg-radius - $stroke-width / 2;
+$diameter: $radius * 2;
+$pi: 3.14159265359;
+$circumference: $pi * $diameter;
+$revolution: 2000ms;
+$color-steps: 4;
+  #loader {
+    .svg {
+        margin: 24px auto;
+        display: block;
+        animation: svg-rotate $revolution * $color-steps linear infinite;
+    }
+}
+
+circle {
+    fill: transparent;
+    stroke: #5e5e5e; // overridden in animation
+    stroke-width: $stroke-width;
+    stroke-linecap: round;
+    stroke-dasharray: 0, $circumference;
+    animation: stroke-dash $revolution linear infinite, stroke-width $revolution linear infinite, stroke-color $revolution * $color-steps steps($color-steps) infinite;
+}
+
+// slowly rotating the whole svg
+@keyframes svg-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// animating the stroke width
+@keyframes stroke-width {
+    // fade-ish feels
+    0%, 100% {
+        stroke-width: 0;
+    }
+    // throttle til circle is almost complete
+    45%,
+    55% {
+        stroke-width: $stroke-width / 2;
+    }
+    // pump it up
+    50% {
+        stroke-width: $stroke-width;
+    }
+}
+
+// offsetting and lengthening the stroke dash
+@keyframes stroke-dash {
+    0% {
+        // draw circle
+        stroke-dasharray: 0, $circumference;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        // complete circle
+        stroke-dasharray: $circumference, 0;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        // undraw circle
+        stroke-dasharray: $circumference, $circumference;
+        stroke-dashoffset: -$circumference;
+    }
+}
+
+// stepped color animation
+@keyframes stroke-color {
+    from {
+        stroke: #5e5e5e;
+    }
+    //to   { stroke: white; } // unnecessary if white
 }
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
