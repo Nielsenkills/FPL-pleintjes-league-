@@ -1,4 +1,4 @@
-<div class="player-overview col-sm-12 col-md-10" ng-show="vm.teams">
+<div class="player-overview col-sm-12 col-md-9" ng-show="vm.teams">
     <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
             <div class="header">
@@ -33,4 +33,6 @@
   <circle cx="100" cy="100" r="50" />
 </svg>
 </div>
-<div class="sidepanel col-md-2 hidden-xs hidden-sm" ng-show="vm.teams">SidePanel</div>
+<div class="sidepanel col-md-3 hidden-xs hidden-sm" ng-show="vm.teams">
+    <league-table></league-table>
+</div>

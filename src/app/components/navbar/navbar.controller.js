@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('gretel')
-    .controller('NavbarCtrl', function() {
+    .controller('NavbarCtrl',[ 'DataService',function(DataService) {
         var vm = this;
         vm.refreshData = function() {
-            alert('refresh this shit');
-            s
+            DataService.refreshTeams();
         }
 
 
-    });
+    }]);

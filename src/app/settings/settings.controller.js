@@ -1,11 +1,17 @@
 'use strict';
 
 angular.module('gretel')
-    .controller('SettingsCtrl', ['PlayerService',function(PlayerService) {
+    .controller('SettingsCtrl', ['DataService', function(DataService) {
         var vm = this;
-        
-        PlayerService.getPlayers().then(function(data) {
-        	vm.players = data;
-            console.log(data);
-        })
+        vm.selectedPlayer = null;
+
+        DataService.getPlayers().then(function(data) {
+            vm.players = data;
+        });
+
+        vm.playerChanged = function() {
+            console.log(vm.selectedPlayer);
+            localStorage.setItem("currentPlayer", JSON.stringify(vm.selectedPlayer));
+            console.log(JSON.parse(localStorage.getItem("currentPlayer")));
+        };
     }]);

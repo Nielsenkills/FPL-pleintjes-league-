@@ -15,6 +15,9 @@ $currentGameWeek = 38;
 
 session_start();
 
+function getPlayers(){
+	return getAllTeams();
+}
 
 function getPlayerTableInfo($DOMDoc){
 	$finder = new DomXPath($DOMDoc);
@@ -164,6 +167,9 @@ function getGWTeam($teamId){
 //routing
 if(isset($_GET["q"])){
 	switch ($_GET["q"]) {
+	case 'getPlayers':
+		echo json_encode(getPlayers());
+		break;
 	case 'getGWTeam':
 		getCurrentGameWeek(194302);
 		echo json_encode(getGWTeam($_GET["tid"]));
@@ -183,8 +189,9 @@ if(isset($_GET["q"])){
 	}
 }
 else{
-	//echo json_encode(getLeagueStandings(194302));
-	echo json_encode(getGWTeam(798421));
+	echo json_encode(getLeagueStandings(194302));
+	//getCurrentGameWeek(194302);
+	//echo json_encode(getGWTeam(798421));
 }
 
 

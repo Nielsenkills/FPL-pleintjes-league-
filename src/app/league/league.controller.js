@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('gretel')
-    .controller('LeagueCtrl', ['PlayerService',function(PlayerService) {
+    .controller('LeagueCtrl', ['DataService',function(DataService) {
         var vm = this;
         
-        PlayerService.getPlayers().then(function(data) {
+        DataService.getPlayerStandings().then(function(data) {
         	vm.players = data;
             console.log(data);
         })

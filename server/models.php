@@ -142,35 +142,6 @@ class League
 
 }
 
-class Match
-{
-    public $id;
-    public $homeId;
-    public $homeScore;
-    public $awayId;
-    public $awayScore;
-    public $adminId;
-    public $tournamentId;
-    public $regDate;
-    public $version;
-    public $random;
-
-    // Assigning the values
-    public function __construct($id, $homeId,$homeScore,$awayId,$awayScore,$adminId,$tournamentId,$regDate,$version,$random)
-    {
-        $this->id = $id;
-        $this->homeId = $homeId;
-        $this->homeScore = $homeScore;
-        $this->awayId = $awayId;
-        $this->awayScore = $awayScore;
-        $this->adminId = $adminId;
-        $this->tournamentId = $tournamentId;
-        $this->regDate = $regDate;
-        $this->version = $version;
-        $this->random = $random;
-    }
-
-}
 
 
 
