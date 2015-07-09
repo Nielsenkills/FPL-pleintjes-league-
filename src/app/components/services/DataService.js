@@ -49,8 +49,8 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                $http.get('./data/getGWTeams.json').success(function(data) {
-                    //$http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                //$http.get('./data/getGWTeams.json').success(function(data) {
+                    $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
 
                     data.forEach(function(team) {
 
