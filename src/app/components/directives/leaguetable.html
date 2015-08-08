@@ -1,11 +1,10 @@
 <div class="leagueTable">
     <div class="row" ng-repeat="player in players" ng-class="{'me':player.id == currentPlayer.id}">
-        <div class="col-xs-1 rank">{{player.rank}} {{player.id}} {{currentPlayer.id}}</div>
-        <div class="col-xs-5 name">{{player.teamName}}</div>
+        <div class="col-xs-6 name">{{player.rank}} {{player.teamName}}</div>
         <div class="col-xs-1 wins">{{player.wins}}</div>
         <div class="col-xs-1 draws">{{player.draws}}</div>
         <div class="col-xs-1 losses">{{player.losses}}</div>
-        <div class="col-xs-1 totalPts">{{player.totalPoints}}</div>
+        <div class="col-xs-2 totalPts">{{player.totalPoints}}</div>
         <div class="col-xs-1 gamePts">{{player.matchPoints}}</div>
     </div>
 </div>

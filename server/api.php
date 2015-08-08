@@ -110,7 +110,7 @@ function getGWTeam($teamId){
 
 	
 	//Get the total points for this gw team
-	$totalPointsNode = $playerFinder->query("//div[contains(@class, 'ismSBPrimary')]/div");
+	$totalPointsNode = $playerFinder->query("//div[contains(@class, 'ism-scoreboard-panel__points')]");
 	$GWTeam->points = preg_replace("/[^0-9]/","",$totalPointsNode->item(0)->nodeValue);
 
 	//Get the amount of transfers for this gw team
@@ -171,11 +171,11 @@ if(isset($_GET["q"])){
 		echo json_encode(getPlayers());
 		break;
 	case 'getGWTeam':
-		getCurrentGameWeek(194302);
+		getCurrentGameWeek(5668);
 		echo json_encode(getGWTeam($_GET["tid"]));
 		break;
 	case 'getAllGWTeams':
-		getCurrentGameWeek(194302);
+		getCurrentGameWeek(5668);
 		echo json_encode(getAllGWTeams());
 		break;
 	case 'getTournamentTable':
@@ -189,7 +189,7 @@ if(isset($_GET["q"])){
 	}
 }
 else{
-	echo json_encode(getLeagueStandings(194302));
+	echo json_encode(getLeagueStandings(5668));
 	//getCurrentGameWeek(194302);
 	//echo json_encode(getGWTeam(798421));
 }
