@@ -14,7 +14,7 @@ angular.module('gretel')
             if (svc.players) {
                 deferred.resolve(svc.playerStandings);
             } else {
-                $http.get('./data/getLeagueStandings.json').success(function(data) {
+                $http.get('./server/api.php?q=getTournamentTable').success(function(data) {
                     // you can do some processing here
                     svc.playerStandings = data;
 
@@ -31,7 +31,7 @@ angular.module('gretel')
             if (svc.players) {
                 deferred.resolve(svc.players);
             } else {
-                $http.get('./data/getPlayers.json').success(function(data) {
+                $http.get('./server/api.php?q=getPlayers').success(function(data) {
                     // you can do some processing here
                     console.log(data);
                     svc.players = data;
@@ -49,8 +49,8 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                $http.get('./data/getGWTeams.json').success(function(data) {
-                    //$http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                //$http.get('./data/getGWTeams.json').success(function(data) {
+                    $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
 
                     data.forEach(function(team) {
 

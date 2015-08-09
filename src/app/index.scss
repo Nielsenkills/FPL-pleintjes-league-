@@ -28,14 +28,16 @@ $yellow:yellow;
 }
 
 .leagueTable {
-    .col-xs-1, .col-xs-2 {
+    .col-xs-1,
+    .col-xs-2 {
         padding: 0px;
     }
-    .name{
+    .name {
         width: 55%;
     }
-    .wins, 
-    .draws, .losses {
+    .wins,
+    .draws,
+    .losses {
         width: 25px;
     }
 }
@@ -104,6 +106,7 @@ $yellow:yellow;
                     height: 100%;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                    overflow: hidden;
                 }
             }
             .captaincy {

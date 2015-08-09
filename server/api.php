@@ -129,10 +129,19 @@ function getGWTeam($teamId){
    	 	$playerStats[$stat->element] = $stat->stats;
 	}
 
-	foreach ($playerRows as $p) {
+	$playerNames = $playerFinder->query("//span[contains(@class, 'ismPitchWebName')]");
+
+	$pnames = array();
+    foreach($playerNames as $pname) {
+      $pnames[] = $pname;
+    }
+
+	foreach ($playerRows as $key=>$p) {
 
 		$jsonData = json_decode(str_replace('ismPitchElement','',$p->getAttribute('class')));
 		$stringname = preg_replace('/[0-9]+/', '', $p->nodeValue);
+		$stringname = $pnames[$key]->nodeValue;
+
 		$isSub = intval($jsonData->sub) > 0;
 		$pID = $jsonData->id;
 		//form the stats into a playerdetail model FIX THE ORDER
@@ -179,7 +188,7 @@ if(isset($_GET["q"])){
 		echo json_encode(getAllGWTeams());
 		break;
 	case 'getTournamentTable':
-		echo json_encode(getLeagueStandings($_GET["lid"]));
+		echo json_encode(getLeagueStandings(5668));
 		break;
 	case 'getSessionId':
 		echo session_id();
