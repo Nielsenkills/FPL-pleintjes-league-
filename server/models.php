@@ -145,16 +145,16 @@ class League
 class Fixture
 {
     public $id;
-    public $home_id;
-    public $away_id;
+    public $home;
+    public $away;
     public $gameweek;
 
     // Assigning the values
-    public function __construct($id, $home_id,$away_id,$gameweek)
+    public function __construct($id, $home,$away,$gameweek)
     {
         $this->id = $id;
-        $this->home_id = $home_id;
-        $this->away_id = $away_id;
+        $this->home = $home;
+        $this->away = $away;
         $this->gameweek = $gameweek;
     }
 
@@ -178,6 +178,23 @@ class Match
         $this->away_id = $away_id;
         $this->away_score = $away_score;
         $this->gameweek = $gameweek;
+    }
+
+}
+
+
+class Manager
+{
+    public $id;
+    public $firstName;
+    public $lastName;
+
+    // Assigning the values
+    public function __construct($id, $firstName,$lastName)
+    {
+        $this->id = $id;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
     }
 
 }

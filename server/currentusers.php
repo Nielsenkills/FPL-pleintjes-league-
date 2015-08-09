@@ -1,7 +1,7 @@
 <?php 
 
 
-function getGWTeamFromArray($teamID){
+function getGWTeamForId($teamID){
 	$conn = connect();
 	// Check connection
     if ($conn->connect_error) {
@@ -15,6 +15,22 @@ function getGWTeamFromArray($teamID){
     $obj = new GWTeam($array[0], $array[1], $array[2],null,0,0,null);
 
 	return $obj;
+}
+
+function getManagerForId($teamID){
+    $conn = connect();
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `managers` WHERE team_id = " . $teamID ." ";
+    $result = $conn->query($sql);
+
+
+    $array = $result->fetch_row();
+    $obj = new Manager($array[0], $array[1], $array[2]);
+
+    return $obj;
 }
 
 

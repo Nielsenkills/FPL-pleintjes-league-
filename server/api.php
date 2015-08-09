@@ -5,16 +5,6 @@ include 'functions.php';
 include 'models.php';
 include 'currentusers.php';
 
-
-
-/*
-global $currentGameWeek;
-
-$currentGameWeek = 38;
-*/
-
-
-
 session_start();
 
 function getPlayers(){
@@ -100,7 +90,7 @@ function getGWTeam($teamId){
 	$htm = file_get_contents($url);
 
 	//get the GWTeam object from the predefined array in currentusers.php
-	$GWTeam = getGWTeamFromArray($teamId);
+	$GWTeam = getGWTeamForId($teamId);
 	//get the pitch info for the players
 	$DOMdoc = new DOMDocument();
 	libxml_use_internal_errors(true);
@@ -171,19 +161,40 @@ function getGWTeam($teamId){
 }
 
 
-function getCurrentFixtures(){
+function getFixturesForGW($gw){
     // Create connection
     $conn = connect();
 	// Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `fixtures` WHERE gameweek = " . $_SESSION["GW"] . "";
+    $sql = "SELECT * FROM `fixtures` WHERE gameweek = " . $gw . "";
     $result = $conn->query($sql);
 
     $jsonData = array();
     while ($array = $result->fetch_row()) {
-    	$obj = new Fixture($array[0], $array[1], $array[2], $array[3]);
+
+    	$obj = new Fixture($array[0], getManagerForId($array[1]), getManagerForId($array[2]), $array[3]);
+        $jsonData[] = $obj;
+    }
+    return $jsonData;
+
+}
+
+function getAllNextFixtures($currentGW){
+    // Create connection
+    $conn = connect();
+	// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `fixtures` WHERE gameweek > " . $currentGW . "";
+    $result = $conn->query($sql);
+
+    $jsonData = array();
+    while ($array = $result->fetch_row()) {
+
+    	$obj = new Fixture($array[0], getManagerForId($array[1]), getManagerForId($array[2]), $array[3]);
         $jsonData[] = $obj;
     }
     return $jsonData;
@@ -217,7 +228,15 @@ if(isset($_GET["q"])){
 		break;
 	case 'getCurrentFixtures':
 		getCurrentGameWeek(5668);
-		echo json_encode(getCurrentFixtures());
+		echo json_encode(getFixturesForGW($_SESSION["GW"]));
+		break;
+	case 'getNextFixtures':
+		getCurrentGameWeek(5668);
+		echo json_encode(getFixturesForGW(intval($_SESSION["GW"]) +1));
+		break;
+	case 'getAllNextFixtures':
+		getCurrentGameWeek(5668);
+		echo json_encode(getAllNextFixtures($_SESSION["GW"]));
 		break;
 	default:
 		break;
