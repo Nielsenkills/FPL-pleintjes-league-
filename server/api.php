@@ -1,7 +1,9 @@
 <?php 
+
+include 'connect.php';
+include 'functions.php';
 include 'models.php';
 include 'currentusers.php';
-include 'functions.php';
 
 
 
@@ -169,6 +171,26 @@ function getGWTeam($teamId){
 }
 
 
+function getCurrentFixtures(){
+    // Create connection
+    $conn = connect();
+	// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `fixtures` WHERE gameweek = " . $_SESSION["GW"] . "";
+    $result = $conn->query($sql);
+
+    $jsonData = array();
+    while ($array = $result->fetch_row()) {
+    	$obj = new Fixture($array[0], $array[1], $array[2], $array[3]);
+        $jsonData[] = $obj;
+    }
+    return $jsonData;
+
+}
+
+
 // get player info http://fantasy.premierleague.com/web/api/elements/217  with the last being an id
 
 
@@ -192,6 +214,10 @@ if(isset($_GET["q"])){
 		break;
 	case 'getSessionId':
 		echo session_id();
+		break;
+	case 'getCurrentFixtures':
+		getCurrentGameWeek(5668);
+		echo json_encode(getCurrentFixtures());
 		break;
 	default:
 		break;

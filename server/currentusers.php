@@ -2,31 +2,37 @@
 
 
 function getGWTeamFromArray($teamID){
-	$teamsassoc = [
-		17583=>new GWTeam(17583,"Robin","Verhulst",null,0,0,null),
-		22840=>new GWTeam(22840,"Sven","Stassyns",null,0,0,null),
-		1381770=>new GWTeam(1381770,"Yinan","Ma",null,0,0,null),
-		1355632=>new GWTeam(1355632,"Mitch","De Lauwer",null,0,0,null),
-		304862=>new GWTeam(304862,"Philip","Hermans",null,0,0,null),
-		31151=>new GWTeam(31151,"Nielsen","Stassyns",null,0,0,null)
-	];
+	$conn = connect();
+	// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `managers` WHERE team_id = " . $teamID ." ";
+    $result = $conn->query($sql);
 
-	return $teamsassoc[$teamID];
+
+    $array = $result->fetch_row();
+    $obj = new GWTeam($array[0], $array[1], $array[2],null,0,0,null);
+
+	return $obj;
 }
 
 
 function getAllTeams(){
-	$teams = [
-		new GWTeam(17583,"Robin","Verhulst",null,0,0,null),
-		new GWTeam(22840,"Sven","Stassyns",null,0,0,null),
-		new GWTeam(1381770,"Yinan","Ma",null,0,0,null),
-		new GWTeam(1355632,"Mitch","De Lauwer",null,0,0,null),
-		new GWTeam(304862,"Philip","Hermans",null,0,0,null),
-		new GWTeam(31151,"Nielsen","Stassyns",null,0,0,null)
-	];
+	    $conn = connect();
+	// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `managers` ";
+    $result = $conn->query($sql);
 
-	return $teams;
-
+    $teams = array();
+    while ($array = $result->fetch_row()) {
+    	$obj = new GWTeam($array[0], $array[1], $array[2],null,0,0,null);
+        $teams[] = $obj;
+    }
+    return $teams;
 }
 
 ?>
