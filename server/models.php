@@ -142,6 +142,46 @@ class League
 
 }
 
+class Fixture
+{
+    public $id;
+    public $home_id;
+    public $away_id;
+    public $gameweek;
+
+    // Assigning the values
+    public function __construct($id, $home_id,$away_id,$gameweek)
+    {
+        $this->id = $id;
+        $this->home_id = $home_id;
+        $this->away_id = $away_id;
+        $this->gameweek = $gameweek;
+    }
+
+}
+
+class Match
+{
+    public $id;
+    public $home_id;
+    public $home_score;
+    public $away_id;
+    public $away_score;
+    public $gameweek;
+
+    // Assigning the values
+    public function __construct($id, $home_id,$home_score,$away_id,$away_score,$gameweek)
+    {
+        $this->id = $id;
+        $this->home_id = $home_id;
+        $this->home_score = $home_score;
+        $this->away_id = $away_id;
+        $this->away_score = $away_score;
+        $this->gameweek = $gameweek;
+    }
+
+}
+
 
 
 
