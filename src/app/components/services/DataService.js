@@ -50,7 +50,7 @@ angular.module('gretel')
                 deferred.resolve(svc.gwTeams);
             } else {
                 //$http.get('./data/getGWTeams.json').success(function(data) {
-                    $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
 
                     data.forEach(function(team) {
 
@@ -129,8 +129,8 @@ angular.module('gretel')
             },
             3: {
                 'id': 3,
-                'name': 'Burnley',
-                'short': 'BRN'
+                'name': 'Bournemouth',
+                'short': 'BOU'
             },
             4: {
                 'id': 4,
@@ -149,63 +149,63 @@ angular.module('gretel')
             },
             7: {
                 'id': 7,
-                'name': 'Hull City',
-                'short': 'HUL'
-            },
-            8: {
-                'id': 8,
                 'name': 'Leicester',
                 'short': 'LEI'
             },
-            9: {
-                'id': 9,
+            8: {
+                'id': 8,
                 'name': 'Liverpool',
                 'short': 'LIV'
             },
-            10: {
-                'id': 10,
+            9: {
+                'id': 9,
                 'name': 'Man City',
                 'short': 'MCI'
             },
-            11: {
-                'id': 11,
+            10: {
+                'id': 10,
                 'name': 'Man Utd',
                 'short': 'MNU'
             },
-            12: {
-                'id': 12,
+            11: {
+                'id': 11,
                 'name': 'Newcastle',
                 'short': 'NWE'
             },
+            12: {
+                'id': 12,
+                'name': 'Norwich',
+                'short': 'NOR'
+            },
             13: {
                 'id': 13,
-                'name': 'QPR',
-                'short': 'QPR'
-            },
-            14: {
-                'id': 14,
                 'name': 'Southhampton',
                 'short': 'SOU'
             },
-            15: {
-                'id': 15,
+            14: {
+                'id': 14,
                 'name': 'Tottenham',
                 'short': 'TOT'
             },
-            16: {
-                'id': 16,
+            15: {
+                'id': 15,
                 'name': 'Stoke City',
                 'short': 'STO'
             },
-            17: {
-                'id': 17,
+            16: {
+                'id': 16,
                 'name': 'Sunderland',
                 'short': 'SUN'
             },
-            18: {
-                'id': 18,
+            17: {
+                'id': 17,
                 'name': 'Swansea',
                 'short': 'SWA'
+            },
+            18: {
+                'id': 18,
+                'name': 'Watford',
+                'short': 'WAT'
             },
             19: {
                 'id': 19,
