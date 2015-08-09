@@ -43,6 +43,31 @@ angular.module('gretel')
             return deferred.promise;
         };
 
+
+        svc.getCurrentFixtures = function() {
+            var deferred = $q.defer();
+            $http.get('./server/api.php?q=getCurrentFixtures').success(function(data) {
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        };
+
+        svc.getNextFixtures = function() {
+            var deferred = $q.defer();
+            $http.get('./server/api.php?q=getNextFixtures').success(function(data) {
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        };
+
+        svc.getAllNextFixtures = function() {
+            var deferred = $q.defer();
+            $http.get('./server/api.php?q=getAllNextFixtures').success(function(data) {
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        };
+
         svc.getTeams = function() {
             var deferred = $q.defer();
 
