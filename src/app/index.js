@@ -21,12 +21,6 @@ angular.module('gretel', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui
                 controller: 'MainCtrl',
                 controllerAs:'vm'
             })
-            .state('vs', {
-                url: '/vs',
-                templateUrl: 'app/main/main.html',
-                controller: 'MainCtrl',
-                controllerAs:'vm'
-            })
             .state('settings', {
                 url: '/settings',
                 templateUrl: 'app/settings/settings.html',

@@ -4,3 +4,7 @@
 <div> Wanna change ?</div>
 <select class="form-control" ng-options="player as player.firstName for player in vm.players" 
    ng-model="vm.selectedPlayer" ng-change="vm.playerChanged()"></select>
+
+
+   <div class="setting">Show Current Fixtures on top  of mobile ?<input type="checkbox"
+       ng-model="vm.showCurrentFixturesMobile" ng-change="vm.currentFixMobileChange()"></div>

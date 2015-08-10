@@ -1,4 +1,4 @@
-<div class="visible-xs fixtures-mobile">
+<div class="visible-xs fixtures-mobile" ng-show="vm.showCurrentFixturesMobile == 'true' && vm.teams">
     <div class="subheader">Current Fixtures</div>
     <table class="fixtures">
         <tr ng-repeat="fix in vm.currentFixtures">

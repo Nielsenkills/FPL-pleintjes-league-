@@ -4,6 +4,9 @@ angular.module('gretel')
     .controller('DashboardCtrl', ['DataService', function(DataService) {
         var vm = this;
         vm.currentUser = JSON.parse(localStorage.getItem("currentPlayer"));
+        vm.showCurrentFixturesMobile = localStorage.getItem("showCurrentFixturesMobile");
+
+        console.log(vm.showCurrentFixturesMobile);
 
         vm.switchDetailsVisibility = function(player) {
             console.log('test');
