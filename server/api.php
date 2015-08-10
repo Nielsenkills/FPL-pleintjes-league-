@@ -76,27 +76,37 @@ function getLeagueStandings($leagueId){
 function getAllGWTeams($userid){
 	$returnArray = array();
 
-	$fix = getCurrentFixtureForManager($userid);
 
-	if($fix->home == $userid){
-		$opponentid = $fix->away;
-	}
-	else{
-		$opponentid = $fix->home;
-	}
+	if(isset($userid) && is_numeric($userid) ){
+		$fix = getCurrentFixtureForManager($userid);
 
+		if($fix->home == $userid){
+			$opponentid = $fix->away;
+		}
+		else{
+			$opponentid = $fix->home;
+		}
+		//first add the current user to the array
+		$returnArray [] = getGWTeam($userid);
+		//secondly add the opponent
+		$returnArray [] = getGWTeam($opponentid);
 
-
-	//first add the current user to the array
-	$returnArray [] = getGWTeam($userid);
-	//secondly add the opponent
-	$returnArray [] = getGWTeam($opponentid);
-
-	foreach (getAllTeams() as $team) {
-		if($team->id != $userid && $team->id != $opponentid){
+		foreach (getAllTeams() as $team) {
+			if($team->id != $userid && $team->id != $opponentid){
+				$returnArray[] = getGWTeam($team->id);
+			}
+		}
+	}else{
+		foreach (getAllTeams() as $team) {
 			$returnArray[] = getGWTeam($team->id);
+			
 		}
 	}
+	
+
+
+
+	
 	return $returnArray;
 }
 

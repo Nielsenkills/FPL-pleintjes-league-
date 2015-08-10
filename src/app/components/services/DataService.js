@@ -83,13 +83,20 @@ angular.module('gretel')
 
         svc.getTeams = function() {
             var deferred = $q.defer();
+            var currentuserid = null;
+
+
+            //check if a player has been defined
+            if (localStorage.getItem("currentPlayer")) {
+                currentuserid = JSON.parse(localStorage.getItem("currentPlayer")).id;
+            }
 
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
                 $http.get(svc.getAPIUrl('getAllGWTeams'), {
                     params: {
-                        uid: svc.currentPlayer.id
+                        uid: currentuserid
                     }
                 }).success(function(data) {
 
