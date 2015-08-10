@@ -133,6 +133,64 @@ $yellow:yellow;
     font-family: Helvetica;
 }
 
+.subheader {
+    background-color: #e7e7e7;
+    color: #555;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table.fixtures {
+    width: 100%;
+    td.team {
+        text-align: center;
+        width: 35%;
+    }
+    td.vs {
+        text-align: center;
+    }
+    td.score {
+        &.home {
+            text-align: right;
+            padding-right: 5px;
+        }
+        &.away {
+            text-align: left;
+            padding-left: 5px;
+        }
+    }
+}
+
+span.current {
+    font-weight: bold;
+}
+
+div.dot {
+    border-radius: 100px;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    margin-right: 5px;
+    &.green {
+        background-color: green;
+    }
+    &.red {
+        background-color: red;
+    }
+    &.blue {
+        background-color: blue;
+    }
+}
+
+.fixtures-mobile {
+    margin-top: -10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+}
+
 $svg-radius: 50;
 $stroke-width: 4;
 $radius: $svg-radius - $stroke-width / 2;

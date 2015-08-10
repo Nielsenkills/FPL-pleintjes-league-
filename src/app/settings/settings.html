@@ -1,7 +1,7 @@
-<div>Who are you ?</div>
-<select name="currentPlayer" class="form-control" ng-change="vm.playerChanged()" ng-model="vm.selectedPlayer">
-    <option ng-repeat=" player in vm.players"  value="player">{{player.firstName}} {{player.lastName}}</option>
-</select>
+<div>Who are you ? <span>You are <b>{{vm.selectedPlayer.firstName}} {{vm.selectedPlayer.lastName}}</b></span></div>
 
+
+
+<div> Wanna change ?</div>
 <select class="form-control" ng-options="player as player.firstName for player in vm.players" 
    ng-model="vm.selectedPlayer" ng-change="vm.playerChanged()"></select>

@@ -1,0 +1,40 @@
+[{
+    "id": "1",
+    "home": {
+        "id": "22840",
+        "firstName": "Sven",
+        "lastName": "Stassyns"
+    },
+    "away": {
+        "id": "31151",
+        "firstName": "Nielsen",
+        "lastName": "Stassyns"
+    },
+    "gameweek": "1"
+}, {
+    "id": "2",
+    "home": {
+        "id": "1355632",
+        "firstName": "Mitch",
+        "lastName": "De Lauwer"
+    },
+    "away": {
+        "id": "17583",
+        "firstName": "Robin",
+        "lastName": "Verhulst"
+    },
+    "gameweek": "1"
+}, {
+    "id": "3",
+    "home": {
+        "id": "1381770",
+        "firstName": "Yinan",
+        "lastName": "Ma"
+    },
+    "away": {
+        "id": "304862",
+        "firstName": "Philip",
+        "lastName": "Hermans"
+    },
+    "gameweek": "1"
+}]

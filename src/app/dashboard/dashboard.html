@@ -1,3 +1,19 @@
+<div class="visible-xs fixtures-mobile">
+    <div class="subheader">Current Fixtures</div>
+    <table class="fixtures">
+        <tr ng-repeat="fix in vm.currentFixtures">
+            <td class="team">
+                <div class="dot" ng-class="{'green':fix.home.points > fix.away.points,'red':fix.home.points < fix.away.points,'blue':fix.home.points == fix.away.points}"></div>
+                <span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
+            <td class="score home">{{fix.home.points}}</td>
+            <td class="vs">-</td>
+            <td class="score away">{{fix.away.points}}</td>
+            <td class="team">
+                <div class="dot" ng-class="{'green':fix.away.points > fix.home.points,'red':fix.away.points < fix.home.points,'blue':fix.away.points == fix.home.points}"></div>
+                <span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
+        </tr>
+    </table>
+</div>
 <div class="player-overview col-sm-12 col-md-9" ng-show="vm.teams">
     <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
@@ -10,9 +26,9 @@
                 </div>
             </div>
             <div class="playerList">
-                <div class="player row no-gutter" ng-class="{'sub':player.isSub,'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4,'played':player.details.minutesPlayed > 0}" ng-repeat="player in team.players" >
+                <div class="player row no-gutter" ng-class="{'sub':player.isSub,'GK':player.playerType == 1,'DEF':player.playerType == 2,'MID':player.playerType == 3,'ATT':player.playerType == 4,'played':player.details.minutesPlayed > 0}" ng-repeat="player in team.players">
                     <div>
-                        <div class="name col-xs-6 col-md-4" tooltip="{{player.tooltip}}" tooltip-placement="right" tooltip-append-to-body="true"> 
+                        <div class="name col-xs-6 col-md-4" tooltip="{{player.tooltip}}" tooltip-placement="right" tooltip-append-to-body="true">
                             <div>{{player.name}}</div>
                         </div>
                         <div class="team col-xs-2 col-md-5"><span class="hidden-xs">{{player.details.team.name}}</span><span class="visible-xs">{{player.details.team.short}}</span></div>
@@ -28,11 +44,33 @@
     </div>
 </div>
 <div class="col-sm-12 col-md-10" id="loader" ng-hide="vm.teams">
-    
-<svg class="svg" width="200" height="200">
-  <circle cx="100" cy="100" r="50" />
-</svg>
+    <svg class="svg" width="200" height="200">
+        <circle cx="100" cy="100" r="50" />
+    </svg>
 </div>
 <div class="sidepanel col-md-3 hidden-xs hidden-sm" ng-show="vm.teams">
+    <div class="subheader">Standings</div>
     <league-table></league-table>
+    <div class="subheader">Current Fixtures</div>
+    <table class="fixtures">
+        <tr ng-repeat="fix in vm.currentFixtures">
+            <td class="team">
+                <div class="dot" ng-class="{'green':fix.home.points > fix.away.points,'red':fix.home.points < fix.away.points,'blue':fix.home.points == fix.away.points}"></div>
+                <span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
+            <td class="score home">{{fix.home.points}}</td>
+            <td class="vs">-</td>
+            <td class="score away">{{fix.away.points}}</td>
+            <td class="team">
+                <div class="dot" ng-class="{'green':fix.away.points > fix.home.points,'red':fix.away.points < fix.home.points,'blue':fix.away.points == fix.home.points}"></div>
+                <span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
+        </tr>
+    </table>
+    <div class="subheader">Next Fixtures</div>
+    <table class="fixtures">
+        <tr ng-repeat="fix in vm.nextFixtures">
+            <td class="team"><span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
+            <td class="vs">-</td>
+            <td class="team"><span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
+        </tr>
+    </table>
 </div>

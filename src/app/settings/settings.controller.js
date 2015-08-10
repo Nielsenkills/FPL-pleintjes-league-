@@ -3,7 +3,7 @@
 angular.module('gretel')
     .controller('SettingsCtrl', ['DataService', function(DataService) {
         var vm = this;
-        vm.selectedPlayer = null;
+        vm.selectedPlayer = JSON.parse(localStorage.getItem("currentPlayer"));
 
         DataService.getPlayers().then(function(data) {
             vm.players = data;

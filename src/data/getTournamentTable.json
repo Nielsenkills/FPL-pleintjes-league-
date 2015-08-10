@@ -1,0 +1,67 @@
+[{
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "Ginger Hazard",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}, {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "Svekkes Magics",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}, {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "Nielsenkills",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}, {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "tbd",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}, {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "Los Galacticos",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}, {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "rank": "1",
+    "teamName": "FC Sterrenhemel",
+    "wins": "0",
+    "draws": "0",
+    "losses": "0",
+    "totalPoints": "0",
+    "matchPoints": "0"
+}]

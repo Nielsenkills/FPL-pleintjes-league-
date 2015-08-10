@@ -3,21 +3,50 @@
 angular.module('gretel')
     .controller('DashboardCtrl', ['DataService', function(DataService) {
         var vm = this;
-
-        DataService.getTeams().then(function(data) {
-            vm.teams = data;
-            console.log(data);
-        });
+        vm.currentUser = JSON.parse(localStorage.getItem("currentPlayer"));
 
         vm.switchDetailsVisibility = function(player) {
             console.log('test');
-            if (player.showDetails){
+            if (player.showDetails) {
                 player.showDetails = false;
-            }
-            else{
+            } else {
                 player.showDetails = true;
             }
 
         };
+
+
+        vm.getTeamPoints = function(teamid) {
+            return DataService.getGWTeamPoints(teamid);
+        }
+
+        //Get the data
+
+        DataService.getTeams().then(function(teamdata) {
+
+            vm.teams = teamdata;
+
+            //get the current fixtures, do this after we got the teams because we need the points
+            DataService.getCurrentFixtures().then(function(fixdata) {
+                //add points to the current fixtures
+
+                fixdata.forEach(function(fix) {
+                    fix.home.points = vm.getTeamPoints(fix.home.id);
+                    fix.away.points = vm.getTeamPoints(fix.away.id);
+                });
+
+                vm.currentFixtures = fixdata;
+
+                console.log(data);
+                
+            });
+
+
+        });
+
+        DataService.getNextFixtures().then(function(data) {
+            vm.nextFixtures = data;
+        });
+
 
     }]);

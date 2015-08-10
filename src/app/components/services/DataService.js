@@ -8,13 +8,26 @@ angular.module('gretel')
         svc.playerStandings = null;
         svc.currentPlayer = localStorage.getItem('currentPlayer');
 
+        svc.gwTeamPoints = [];
+
+        // with this function we can mock the backend with json files locally, to be improved later
+        svc.getAPIUrl = function(methodName) {
+            var live = false;
+
+            if (live) {
+                return './server/api.php?q=' + methodName;
+            } else {
+                return './data/' + methodName + '.json';
+            }
+        }
+
         svc.getPlayerStandings = function() {
             var deferred = $q.defer();
 
             if (svc.players) {
                 deferred.resolve(svc.playerStandings);
             } else {
-                $http.get('./server/api.php?q=getTournamentTable').success(function(data) {
+                $http.get(svc.getAPIUrl('getTournamentTable')).success(function(data) {
                     // you can do some processing here
                     svc.playerStandings = data;
 
@@ -31,7 +44,7 @@ angular.module('gretel')
             if (svc.players) {
                 deferred.resolve(svc.players);
             } else {
-                $http.get('./server/api.php?q=getPlayers').success(function(data) {
+                $http.get(svc.getAPIUrl('getPlayers')).success(function(data) {
                     // you can do some processing here
                     console.log(data);
                     svc.players = data;
@@ -46,7 +59,7 @@ angular.module('gretel')
 
         svc.getCurrentFixtures = function() {
             var deferred = $q.defer();
-            $http.get('./server/api.php?q=getCurrentFixtures').success(function(data) {
+            $http.get(svc.getAPIUrl('getCurrentFixtures')).success(function(data) {
                 deferred.resolve(data);
             });
             return deferred.promise;
@@ -54,7 +67,7 @@ angular.module('gretel')
 
         svc.getNextFixtures = function() {
             var deferred = $q.defer();
-            $http.get('./server/api.php?q=getNextFixtures').success(function(data) {
+            $http.get(svc.getAPIUrl('getNextFixtures')).success(function(data) {
                 deferred.resolve(data);
             });
             return deferred.promise;
@@ -62,7 +75,7 @@ angular.module('gretel')
 
         svc.getAllNextFixtures = function() {
             var deferred = $q.defer();
-            $http.get('./server/api.php?q=getAllNextFixtures').success(function(data) {
+            $http.get(svc.getAPIUrl('getAllNextFixtures')).success(function(data) {
                 deferred.resolve(data);
             });
             return deferred.promise;
@@ -74,10 +87,12 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                //$http.get('./data/getGWTeams.json').success(function(data) {
-                $http.get('./server/api.php?q=getAllGWTeams').success(function(data) {
+                $http.get(svc.getAPIUrl('getAllGWTeams')).success(function(data) {
 
                     data.forEach(function(team) {
+
+                        //add to the points array for currentfixtures points
+                        svc.gwTeamPoints[team.id] = team.points;
 
                         //set the total played players for each team
 
@@ -103,6 +118,13 @@ angular.module('gretel')
             }
             return deferred.promise;
         };
+
+        svc.getGWTeamPoints = function(teamid){
+            return svc.gwTeamPoints[teamid];
+        }
+
+
+
 
         svc.refreshTeams = function() {
             console.log('Refreshing Data');
