@@ -37,8 +37,6 @@ angular.module('gretel')
 
                 vm.currentFixtures = fixdata;
 
-                console.log(data);
-                
             });
 
 

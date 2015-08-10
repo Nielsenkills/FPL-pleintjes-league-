@@ -6,13 +6,13 @@ angular.module('gretel')
         svc.gwTeams = null;
         svc.players = null;
         svc.playerStandings = null;
-        svc.currentPlayer = localStorage.getItem('currentPlayer');
+        svc.currentPlayer = JSON.parse(localStorage.getItem("currentPlayer"));
 
         svc.gwTeamPoints = [];
 
         // with this function we can mock the backend with json files locally, to be improved later
         svc.getAPIUrl = function(methodName) {
-            var live = false;
+            var live = true;
 
             if (live) {
                 return './server/api.php?q=' + methodName;

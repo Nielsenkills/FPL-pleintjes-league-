@@ -18,6 +18,8 @@ angular.module('gretel')
                     console.log($scope.players);
                 });
 
+                console.log($scope.currentPlayer);
+
             },
             link: function postLink(scope, element, attrs) {
 
