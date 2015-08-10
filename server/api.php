@@ -73,15 +73,48 @@ function getLeagueStandings($leagueId){
 
 	return getPlayerTableInfo($doc);
 }
-function getAllGWTeams(){
-$returnArray = array();
+function getAllGWTeams($userid){
+	$returnArray = array();
+
+	$fix = getCurrentFixtureForManager($userid);
+
+	if($fix->home == $userid){
+		$opponentid = $fix->away;
+	}
+	else{
+		$opponentid = $fix->home;
+	}
+
+
+
+	//first add the current user to the array
+	$returnArray [] = getGWTeam($userid);
+	//secondly add the opponent
+	$returnArray [] = getGWTeam($opponentid);
 
 	foreach (getAllTeams() as $team) {
+		if($team->id != $userid && $team->id != $opponentid){
 			$returnArray[] = getGWTeam($team->id);
+		}
 	}
 	return $returnArray;
 }
 
+function getCurrentFixtureForManager($managerID){
+    $conn = connect();
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `fixtures` WHERE gameweek = " . $_SESSION["GW"] . " AND ( home_team_id = " . $managerID ." OR away_team_id = " . $managerID ."  )";
+    $result = $conn->query($sql);
+
+
+    $array = $result->fetch_row();
+    $obj = new Fixture($array[0], $array[1], $array[2], $array[3]);
+
+    return $obj;
+}
 
 function getGWTeam($teamId){
 	$returnArray = [];
@@ -161,6 +194,8 @@ function getGWTeam($teamId){
 }
 
 
+
+
 function getFixturesForGW($gw){
     // Create connection
     $conn = connect();
@@ -218,7 +253,7 @@ if(isset($_GET["q"])){
 		break;
 	case 'getAllGWTeams':
 		getCurrentGameWeek(5668);
-		echo json_encode(getAllGWTeams());
+		echo json_encode(getAllGWTeams($_GET["uid"]));
 		break;
 	case 'getTournamentTable':
 		echo json_encode(getLeagueStandings(5668));

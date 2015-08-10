@@ -87,7 +87,11 @@ angular.module('gretel')
             if (svc.gwTeams) {
                 deferred.resolve(svc.gwTeams);
             } else {
-                $http.get(svc.getAPIUrl('getAllGWTeams')).success(function(data) {
+                $http.get(svc.getAPIUrl('getAllGWTeams'), {
+                    params: {
+                        uid: svc.currentPlayer.id
+                    }
+                }).success(function(data) {
 
                     data.forEach(function(team) {
 
@@ -119,7 +123,7 @@ angular.module('gretel')
             return deferred.promise;
         };
 
-        svc.getGWTeamPoints = function(teamid){
+        svc.getGWTeamPoints = function(teamid) {
             return svc.gwTeamPoints[teamid];
         }
 
