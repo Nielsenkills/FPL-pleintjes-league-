@@ -11,7 +11,7 @@
         </tr>
         <tr ng-repeat="transfer in vm.transfertimes" ng-class="{'active':transfer.active}">
             <td class="gw">{{transfer.gw}}</td>
-            <td class="time" ng-repeat="time in transfer.times">{{time.manager.firstName}}</td>
+            <td class="time" ng-repeat="time in transfer.times" ng-class="{'current': time.manager.id == vm.currentUser.id }">{{time.manager.firstName}}</td>
         </tr>
         <tr>
             <td class="gw">37</td>

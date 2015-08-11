@@ -202,10 +202,14 @@ div.dot {
 .transfer-schedule {
     table.transfer-times {
         margin-left: 1vw;
-        min-width: 500px;
+        max-width: 600px;
+        width: 100%;
         font-family: Helvetica;
         tr.active {
             background-color: #e7e7e7;
+        }
+        td{
+            width: 14.2%;
         }
     }
 }
@@ -218,6 +222,9 @@ table.transfer-times {
     }
     .manager {
         padding-left: 10px;
+        &.current {
+            font-weight: bold;
+        }
     }
 }
 
