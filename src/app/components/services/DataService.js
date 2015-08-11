@@ -6,7 +6,7 @@ angular.module('gretel')
         svc.gwTeams = null;
         svc.players = null;
         svc.playerStandings = null;
-        svc.currentPlayer = JSON.parse(localStorage.getItem("currentPlayer"));
+        svc.currentPlayer = JSON.parse(localStorage.getItem('currentPlayer'));
 
         svc.gwTeamPoints = [];
 
@@ -19,7 +19,7 @@ angular.module('gretel')
             } else {
                 return './data/' + methodName + '.json';
             }
-        }
+        };
 
         svc.getPlayerStandings = function() {
             var deferred = $q.defer();
@@ -81,14 +81,29 @@ angular.module('gretel')
             return deferred.promise;
         };
 
+        svc.getTransferTimes = function() {
+            var deferred = $q.defer();
+            $http.get(svc.getAPIUrl('getTransferTimes')).success(function(data) {
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        };
+        svc.getAllTransferTimes = function() {
+            var deferred = $q.defer();
+            $http.get(svc.getAPIUrl('getAllTransferTimes')).success(function(data) {
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        };
+
         svc.getTeams = function() {
             var deferred = $q.defer();
             var currentuserid = null;
 
 
             //check if a player has been defined
-            if (localStorage.getItem("currentPlayer")) {
-                currentuserid = JSON.parse(localStorage.getItem("currentPlayer")).id;
+            if (localStorage.getItem('currentPlayer')) {
+                currentuserid = JSON.parse(localStorage.getItem('currentPlayer')).id;
             }
 
             if (svc.gwTeams) {
@@ -132,7 +147,7 @@ angular.module('gretel')
 
         svc.getGWTeamPoints = function(teamid) {
             return svc.gwTeamPoints[teamid];
-        }
+        };
 
 
 
@@ -161,16 +176,12 @@ angular.module('gretel')
             switch (player.playerType) {
                 case 1:
                     return _CLEAN_SHEETS + player.details.cleanSheets + _SAVES + player.details.saves;
-                    break;
                 case 2:
                     return _CLEAN_SHEETS + player.details.cleanSheets + _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
-                    break;
                 case 3:
                     return _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
-                    break;
                 case 4:
                     return _GOALS + player.details.goalsScored + _ASSISTS + player.details.assists;
-                    break;
             }
         };
 

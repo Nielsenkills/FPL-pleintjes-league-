@@ -199,6 +199,35 @@ class Manager
 
 }
 
+class TransferTime
+{
+    public $time;//as a string
+    public $manager;
+
+    // Assigning the values
+    public function __construct($time,$manager)
+    {
+        $this->time = $time;
+        $this->manager = $manager;
+    }
+
+}
+class TransferGameweek
+{
+    public $gw;
+    public $times;
+    public $active;
+
+    // Assigning the values
+    public function __construct($gw,$times,$active)
+    {
+        $this->gw = $gw;
+        $this->times = $times;
+        $this->active = $active;
+    }
+
+}
+
 
 
 

@@ -21,6 +21,12 @@ angular.module('gretel', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui
                 controller: 'MainCtrl',
                 controllerAs:'vm'
             })
+            .state('transferschedule', {
+                url: '/transferschedule',
+                templateUrl: 'app/transferschedule/transferschedule.html',
+                controller: 'TransferScheduleCtrl',
+                controllerAs:'vm'
+            })
             .state('settings', {
                 url: '/settings',
                 templateUrl: 'app/settings/settings.html',

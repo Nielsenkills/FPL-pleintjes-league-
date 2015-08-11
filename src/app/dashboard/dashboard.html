@@ -73,4 +73,11 @@
             <td class="team"><span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
         </tr>
     </table>
-</div>
+    <div class="subheader linked" ui-sref="transferschedule">Transfer Times</div>
+    <table class="transfer-times">
+        <tr ng-repeat="transfer in vm.currentTransferTimes">
+            <td class="time">{{transfer.time}}</td>
+            <td class="manager">{{transfer.manager.firstName}}</td>
+        </tr>
+    </table>
+    </div>

@@ -1,0 +1,1657 @@
+[{
+    "gw": 1,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 2,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": true
+}, {
+    "gw": 3,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 4,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 5,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 6,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 7,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 8,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 9,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 10,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 11,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 12,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 13,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 14,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 15,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 16,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 17,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 18,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 19,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 20,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 21,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 22,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 23,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 24,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 25,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 26,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 27,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 28,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 29,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 30,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 31,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 32,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 33,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 34,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 35,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }],
+    "active": false
+}, {
+    "gw": 36,
+    "times": [{
+        "time": "19:00",
+        "manager": {
+            "id": "22840",
+            "firstName": "Sven",
+            "lastName": "Stassyns"
+        }
+    }, {
+        "time": "19:05",
+        "manager": {
+            "id": "17583",
+            "firstName": "Robin",
+            "lastName": "Verhulst"
+        }
+    }, {
+        "time": "19:10",
+        "manager": {
+            "id": "304862",
+            "firstName": "Philip",
+            "lastName": "Hermans"
+        }
+    }, {
+        "time": "19:15",
+        "manager": {
+            "id": "1355632",
+            "firstName": "Mitch",
+            "lastName": "De Lauwer"
+        }
+    }, {
+        "time": "19:20",
+        "manager": {
+            "id": "1381770",
+            "firstName": "Yinan",
+            "lastName": "Ma"
+        }
+    }, {
+        "time": "19:25",
+        "manager": {
+            "id": "31151",
+            "firstName": "Nielsen",
+            "lastName": "Stassyns"
+        }
+    }],
+    "active": false
+}]

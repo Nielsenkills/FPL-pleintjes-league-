@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 11 aug 2015 om 12:41
+-- Gegenereerd op: 10 aug 2015 om 02:26
 -- Serverversie: 5.6.17
 -- PHP-versie: 5.5.12
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Databank: `deb38057_fpl`
+-- Databank: `fpl`
 --
 
 -- --------------------------------------------------------
@@ -150,7 +150,6 @@ CREATE TABLE IF NOT EXISTS `managers` (
   `team_id` int(50) NOT NULL,
   `first_name` varchar(150) NOT NULL,
   `last_name` varchar(150) NOT NULL,
-  `draftorder` int(5) NOT NULL,
   PRIMARY KEY (`team_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -158,13 +157,13 @@ CREATE TABLE IF NOT EXISTS `managers` (
 -- Gegevens worden geëxporteerd voor tabel `managers`
 --
 
-INSERT INTO `managers` (`team_id`, `first_name`, `last_name`, `draftorder`) VALUES
-(17583, 'Robin', 'Verhulst', 1),
-(22840, 'Sven', 'Stassyns', 6),
-(31151, 'Nielsen', 'Stassyns', 5),
-(304862, 'Philip', 'Hermans', 2),
-(1355632, 'Mitch', 'De Lauwer', 3),
-(1381770, 'Yinan', 'Ma', 4);
+INSERT INTO `managers` (`team_id`, `first_name`, `last_name`) VALUES
+(17583, 'Robin', 'Verhulst'),
+(22840, 'Sven', 'Stassyns'),
+(31151, 'Nielsen', 'Stassyns'),
+(304862, 'Philip', 'Hermans'),
+(1355632, 'Mitch', 'De Lauwer'),
+(1381770, 'Yinan', 'Ma');
 
 -- --------------------------------------------------------
 

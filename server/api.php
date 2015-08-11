@@ -59,6 +59,34 @@ function getCurrentGameWeek($leagueId){
 	}
 }
 
+function getTransferTimes($gw){
+	$managers = getAllManagers();
+	$times = [];
+	$i = $gw + 2;
+
+	$times[]= new TransferTime('19:00',$managers[((6+$i-2)%6)]);
+	$times[]= new TransferTime('19:05',$managers[((6+$i-1)%6)]);
+	$times[]= new TransferTime('19:10',$managers[((6+$i)%6)]);
+	$times[]= new TransferTime('19:15',$managers[((6+$i+1)%6)]);
+	$times[]= new TransferTime('19:20',$managers[((6+$i+2)%6)]);
+	$times[]= new TransferTime('19:25',$managers[((6+$i+3)%6)]);
+
+	return $times;
+}
+
+function getAllTransferTimes($gw){
+	$gameWeeks= [];
+	for($i = 0 ; $i <= 35;$i++){
+		if(($i+1) == ($gw +1)){
+			$gameWeeks[] = new TransferGameweek(($i +1),getTransferTimes($i),true);
+		}else{
+			$gameWeeks[] = new TransferGameweek(($i +1),getTransferTimes($i),false);
+		}
+
+	}
+	return $gameWeeks;
+}
+
 
 
 function getLeagueStandings($leagueId){
@@ -73,6 +101,8 @@ function getLeagueStandings($leagueId){
 
 	return getPlayerTableInfo($doc);
 }
+
+
 function getAllGWTeams($userid){
 	$returnArray = array();
 
@@ -283,6 +313,15 @@ if(isset($_GET["q"])){
 		getCurrentGameWeek(5668);
 		echo json_encode(getAllNextFixtures($_SESSION["GW"]));
 		break;
+	case 'getTransferTimes':
+		getCurrentGameWeek(5668);
+		echo json_encode(getTransferTimes($_SESSION["GW"]));
+		break;
+	case 'getAllTransferTimes':
+		getCurrentGameWeek(5668);
+		echo json_encode(getAllTransferTimes($_SESSION["GW"]));
+		break;
+		
 	default:
 		break;
 	}

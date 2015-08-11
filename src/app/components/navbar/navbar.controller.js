@@ -5,7 +5,7 @@ angular.module('gretel')
         var vm = this;
         vm.refreshData = function() {
             DataService.refreshTeams();
-        }
+        };
 
 
     }]);

@@ -3,13 +3,10 @@
 angular.module('gretel')
     .controller('DashboardCtrl', ['DataService', function(DataService) {
         var vm = this;
-        vm.currentUser = JSON.parse(localStorage.getItem("currentPlayer"));
-        vm.showCurrentFixturesMobile = localStorage.getItem("showCurrentFixturesMobile");
-
-        console.log(vm.showCurrentFixturesMobile);
+        vm.currentUser = JSON.parse(localStorage.getItem('currentPlayer'));
+        vm.showCurrentFixturesMobile = localStorage.getItem('showCurrentFixturesMobile');
 
         vm.switchDetailsVisibility = function(player) {
-            console.log('test');
             if (player.showDetails) {
                 player.showDetails = false;
             } else {
@@ -21,7 +18,7 @@ angular.module('gretel')
 
         vm.getTeamPoints = function(teamid) {
             return DataService.getGWTeamPoints(teamid);
-        }
+        };
 
         //Get the data
 
@@ -47,6 +44,10 @@ angular.module('gretel')
 
         DataService.getNextFixtures().then(function(data) {
             vm.nextFixtures = data;
+        });
+
+        DataService.getTransferTimes().then(function(data) {
+            vm.currentTransferTimes = data;
         });
 
 

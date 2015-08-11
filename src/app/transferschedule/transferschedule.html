@@ -1,0 +1,26 @@
+<div class="transfer-schedule">
+    <table class="transfer-times">
+        <tr>
+            <th>gw</th>
+            <th>19:00</th>
+            <th>19:05</th>
+            <th>19:10</th>
+            <th>19:15</th>
+            <th>19:20</th>
+            <th>19:25</th>
+        </tr>
+        <tr ng-repeat="transfer in vm.transfertimes" ng-class="{'active':transfer.active}">
+            <td class="gw">{{transfer.gw}}</td>
+            <td class="time" ng-repeat="time in transfer.times">{{time.manager.firstName}}</td>
+        </tr>
+        <tr>
+            <td class="gw">37</td>
+            <td class="time" colspan="6" style="font-weight: bold;text-align: center;">League standing</td>
+        </tr>
+
+        <tr>
+            <td class="gw">38</td>
+            <td class="time" colspan="6" style="font-weight: bold;text-align: center;">League standing</td>
+        </tr>
+    </table>
+</div>

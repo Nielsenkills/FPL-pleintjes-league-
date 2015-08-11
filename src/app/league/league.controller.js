@@ -7,5 +7,5 @@ angular.module('gretel')
         DataService.getPlayerStandings().then(function(data) {
         	vm.players = data;
             console.log(data);
-        })
+        });
     }]);

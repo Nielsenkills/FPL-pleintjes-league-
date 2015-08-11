@@ -40,7 +40,7 @@ function getAllTeams(){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `managers` ";
+    $sql = "SELECT * FROM `managers` ORDER BY draftorder ";
     $result = $conn->query($sql);
 
     $teams = array();
@@ -49,6 +49,23 @@ function getAllTeams(){
         $teams[] = $obj;
     }
     return $teams;
+}
+
+function getAllManagers(){
+        $conn = connect();
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM `managers` ORDER BY draftorder ";
+    $result = $conn->query($sql);
+
+    $managers = array();
+    while ($array = $result->fetch_row()) {
+        $obj = new Manager($array[0], $array[1], $array[2]);
+        $managers[] = $obj;
+    }
+    return $managers;
 }
 
 ?>

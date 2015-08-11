@@ -40,8 +40,7 @@ $yellow:yellow;
     .losses {
         width: 25px;
     }
-
-    tr.me{
+    tr.me {
         font-weight: bold;
     }
 }
@@ -193,6 +192,32 @@ div.dot {
     padding-left: 0px;
     padding-right: 0px;
     margin-bottom: 10px;
+}
+
+.linked {
+    cursor: pointer;
+}
+
+.transfer-schedule {
+    table.transfer-times {
+        margin-left: 1vw;
+        min-width: 500px;
+        font-family: Helvetica;
+        tr.active {
+            background-color: #e7e7e7;
+        }
+    }
+}
+
+table.transfer-times {
+    width: 100%;
+    .time {
+        text-align: right;
+        width: 50%;
+    }
+    .manager {
+        padding-left: 10px;
+    }
 }
 
 $svg-radius: 50;
