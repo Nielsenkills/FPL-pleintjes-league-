@@ -1,24 +1,8 @@
-<div class="visible-xs fixtures-mobile" ng-show="vm.showCurrentFixturesMobile == 'true' && vm.teams">
-    <div class="subheader">Current Fixtures</div>
-    <table class="fixtures">
-        <tr ng-repeat="fix in vm.currentFixtures">
-            <td class="team">
-                <div class="dot" ng-class="{'green':fix.home.points > fix.away.points,'red':fix.home.points < fix.away.points,'blue':fix.home.points == fix.away.points}"></div>
-                <span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
-            <td class="score home">{{fix.home.points}}</td>
-            <td class="vs">-</td>
-            <td class="score away">{{fix.away.points}}</td>
-            <td class="team">
-                <div class="dot" ng-class="{'green':fix.away.points > fix.home.points,'red':fix.away.points < fix.home.points,'blue':fix.away.points == fix.home.points}"></div>
-                <span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
-        </tr>
-    </table>
-</div>
 <div class="player-overview col-sm-12 col-md-9" ng-show="vm.teams">
     <div class="team col-md-4 col-sm-6 col-xs-6" ng-repeat="team in vm.teams">
         <div class="thumbnail">
             <div class="header">
-                <div class="name text-center">{{team.firstName}}</div>
+                <div class="name text-center">{{team.firstName}} {{team.shortLastName}}.</div>
                 <div class="info text-center">
                     <div class="transfers"><span class="hidden-xs">Transfers:{{team.transfers}}</span><span class="visible-xs">T:{{team.transfers}}</span></div>
                     <div class="gw-points">{{team.points}}<span>pts</span></div>
@@ -48,36 +32,9 @@
         <circle cx="100" cy="100" r="50" />
     </svg>
 </div>
+<!--
 <div class="sidepanel col-md-3 hidden-xs hidden-sm" ng-show="vm.teams">
     <div class="subheader">Standings</div>
     <league-table></league-table>
-    <div class="subheader">Current Fixtures</div>
-    <table class="fixtures">
-        <tr ng-repeat="fix in vm.currentFixtures">
-            <td class="team">
-                <div class="dot" ng-class="{'green':fix.home.points > fix.away.points,'red':fix.home.points < fix.away.points,'blue':fix.home.points == fix.away.points}"></div>
-                <span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
-            <td class="score home">{{fix.home.points}}</td>
-            <td class="vs">-</td>
-            <td class="score away">{{fix.away.points}}</td>
-            <td class="team">
-                <div class="dot" ng-class="{'green':fix.away.points > fix.home.points,'red':fix.away.points < fix.home.points,'blue':fix.away.points == fix.home.points}"></div>
-                <span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
-        </tr>
-    </table>
-    <div class="subheader">Next Fixtures</div>
-    <table class="fixtures">
-        <tr ng-repeat="fix in vm.nextFixtures">
-            <td class="team"><span ng-class="{'current':vm.currentUser.id == fix.home.id}">{{fix.home.firstName}}</span></td>
-            <td class="vs">-</td>
-            <td class="team"><span ng-class="{'current':vm.currentUser.id == fix.away.id}">{{fix.away.firstName}}</span></td>
-        </tr>
-    </table>
-    <div class="subheader linked" ui-sref="transferschedule">Transfer Times</div>
-    <table class="transfer-times">
-        <tr ng-repeat="transfer in vm.currentTransferTimes">
-            <td class="time">{{transfer.time}}</td>
-            <td class="manager" ng-class="{'current': transfer.manager.id == vm.currentUser.id }">{{transfer.manager.firstName}}</td>
-        </tr>
-    </table>
-    </div>
+</div>
+-->

@@ -7,7 +7,7 @@ function getGWTeamForId($teamID){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `managers` WHERE team_id = " . $teamID ." ";
+    $sql = "SELECT * FROM `managers` WHERE active = 1 AND team_id = " . $teamID ." ";
     $result = $conn->query($sql);
 
 
@@ -23,7 +23,7 @@ function getManagerForId($teamID){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `managers` WHERE team_id = " . $teamID ." ";
+    $sql = "SELECT * FROM `managers` WHERE active = 1 AND team_id = " . $teamID ." ";
     $result = $conn->query($sql);
 
 
@@ -40,7 +40,7 @@ function getAllTeams(){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `managers` ORDER BY draftorder ";
+    $sql = "SELECT * FROM `managers` WHERE active = 1 ORDER BY draftorder ";
     $result = $conn->query($sql);
 
     $teams = array();
@@ -57,7 +57,7 @@ function getAllManagers(){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT * FROM `managers` ORDER BY draftorder ";
+    $sql = "SELECT * FROM `managers` WHERE active = 1 ORDER BY draftorder ";
     $result = $conn->query($sql);
 
     $managers = array();

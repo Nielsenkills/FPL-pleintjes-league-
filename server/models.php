@@ -6,6 +6,7 @@ class GWTeam
     public $id;
     public $firstName;
     public $lastName;
+    public $shortName;
     public $teamName;
     
     
@@ -20,6 +21,13 @@ class GWTeam
         $this->firstName = $firstName;
         $this->lastName = $lastName;
 
+        $words = explode(" ", $lastName);
+        $acronym = "";
+
+        foreach ($words as $w) {
+          $acronym .= $w[0];
+        }
+        $this->shortLastName =  $acronym;
         $this->teamName = $teamName;
         
         $this->points = $points;

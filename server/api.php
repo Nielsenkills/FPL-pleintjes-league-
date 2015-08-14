@@ -1,9 +1,9 @@
 <?php 
-
 include 'connect.php';
 include 'functions.php';
 include 'models.php';
 include 'currentusers.php';
+
 
 session_start();
 
@@ -15,11 +15,8 @@ function getPlayerTableInfo($DOMDoc){
 	$finder = new DomXPath($DOMDoc);
 	$classname="ismH2HStandingsTable";
 	$playerRows = $finder->query("//*[contains(@class, '$classname')]/tbody/tr");
-
-	$returnArray = [];
-	foreach($playerRows as $pRow){
-		//$pValues = explode('\n',$pRow->nodeValue);
-		
+	$returnArray = array();
+	foreach($playerRows as $pRow){		
 		 $playerDoc = new DOMDocument();
 		$cloned = $pRow->cloneNode(TRUE);
 		$playerDoc->appendChild($playerDoc->importNode($cloned, True));
@@ -61,7 +58,7 @@ function getCurrentGameWeek($leagueId){
 
 function getTransferTimes($gw){
 	$managers = getAllManagers();
-	$times = [];
+	$times = array();
 	$i = $gw + 2;
 
 	$times[]= new TransferTime('19:00',$managers[((6+$i-2)%6)]);
@@ -75,7 +72,7 @@ function getTransferTimes($gw){
 }
 
 function getAllTransferTimes($gw){
-	$gameWeeks= [];
+	$gameWeeks= array();
 	for($i = 0 ; $i <= 35;$i++){
 		if(($i+1) == ($gw +1)){
 			$gameWeeks[] = new TransferGameweek(($i +1),getTransferTimes($i),true);
@@ -157,7 +154,7 @@ function getCurrentFixtureForManager($managerID){
 }
 
 function getGWTeam($teamId){
-	$returnArray = [];
+	$returnArray = array();
 
 	$url = 'http://fantasy.premierleague.com/entry/' . $teamId . '/event-history/'. $_SESSION["GW"] . '/';
 	$htm = file_get_contents($url);
@@ -180,7 +177,8 @@ function getGWTeam($teamId){
 
 	//Get the amount of transfers for this gw team
 	$transfersNode = $playerFinder->query("//dl[contains(@class, 'ismSBDefList')]/dd");
-	$GWTeam->transfers = preg_replace("/[^0-9]/","",$transfersNode->item(1)->nodeValue);
+	//$GWTeam->transfers = preg_replace("/[^0-9]/","",$transfersNode->item(1)->nodeValue);
+	$GWTeam->transfers = preg_replace('/\s+/', '', $transfersNode->item(1)->nodeValue); 
 
 	//Get the the teamname  for this gw team
 	$teamNameNode = $playerFinder->query("//h2[contains(@class, 'ismSection3')]");
@@ -288,37 +286,37 @@ if(isset($_GET["q"])){
 		echo json_encode(getPlayers());
 		break;
 	case 'getGWTeam':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getGWTeam($_GET["tid"]));
 		break;
 	case 'getAllGWTeams':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getAllGWTeams($_GET["uid"]));
 		break;
 	case 'getTournamentTable':
-		echo json_encode(getLeagueStandings(5668));
+		echo json_encode(getLeagueStandings(78479));
 		break;
 	case 'getSessionId':
 		echo session_id();
 		break;
 	case 'getCurrentFixtures':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getFixturesForGW($_SESSION["GW"]));
 		break;
 	case 'getNextFixtures':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getFixturesForGW(intval($_SESSION["GW"]) +1));
 		break;
 	case 'getAllNextFixtures':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getAllNextFixtures($_SESSION["GW"]));
 		break;
 	case 'getTransferTimes':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getTransferTimes($_SESSION["GW"]));
 		break;
 	case 'getAllTransferTimes':
-		getCurrentGameWeek(5668);
+		getCurrentGameWeek(78479);
 		echo json_encode(getAllTransferTimes($_SESSION["GW"]));
 		break;
 		
@@ -327,7 +325,7 @@ if(isset($_GET["q"])){
 	}
 }
 else{
-	echo json_encode(getLeagueStandings(5668));
+	echo json_encode(getLeagueStandings(78479));
 	//getCurrentGameWeek(194302);
 	//echo json_encode(getGWTeam(798421));
 }
